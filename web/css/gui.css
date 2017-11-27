@@ -55,3 +55,21 @@ nav a:hover {
 .container {
     margin-bottom: 105px;
 }
+
+.crudMenu {
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+}
+
+.crudMenu a {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.crudMenu a:hover {
+    color: red;
+    text-decoration: none;
+    border-bottom: 1px solid red;
+}

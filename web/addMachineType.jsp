@@ -25,11 +25,11 @@
             <a href="#">Home 
                 <i class="fa fa-home" aria-hidden="true"></i>
             </a>
-            <a href="addDealer.jsp">
+            <a href="#">
                 Dealers Manager 
                 <i class="fa fa-users" aria-hidden="true"></i>
             </a>
-            <a href="machineManager.jsp" >
+            <a href="#" >
                 Machines Manager
                 <i class="fa fa-gamepad" aria-hidden="true"></i>
             </a>
@@ -46,50 +46,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundoz<br>
+                    <form action="MachineTypeAdd" method="POST">
+                        <table>
+                            <tr>
+                                <th><label for="description">Machine type description: </label></th>
+                                <th><input type="text" id="description" name="description" class="form-control"></th>
+                            </tr>
+                        </table>
+                            <input type="submit" name="action" class="btn btn-primary" value="add">
+                    </form>
                 </div>
             </div>
         </div>

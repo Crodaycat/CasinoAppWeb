@@ -39,9 +39,9 @@ public class MachineTypeAdd extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
-            String descripcion = request.getParameter("descipcion");
+            String description = request.getParameter("description");
             
-            MachineType machineType = new MachineType(0, descripcion);
+            MachineType machineType = new MachineType(0, description);
             
             EntityManager em;
             EntityManagerFactory emf;

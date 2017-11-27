@@ -29,7 +29,7 @@
                 Dealers Manager 
                 <i class="fa fa-users" aria-hidden="true"></i>
             </a>
-            <a href="machineManager.jsp" >
+            <a href="#" >
                 Machines Manager
                 <i class="fa fa-gamepad" aria-hidden="true"></i>
             </a>
@@ -45,51 +45,14 @@
         
         <div class="container">
             <div class="row">
+                <div class="col-3 crudMenu">
+                    <a href="addMachineType.jsp">
+                        Add a new machine type 
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    </a>
+                </div>
                 <div class="col-12">
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundo<br>
-                    Hola mundoz<br>
+                    
                 </div>
             </div>
         </div>
