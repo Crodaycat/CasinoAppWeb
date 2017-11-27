@@ -21,38 +21,14 @@
     
     <body>
         
-        <nav>
-            <a href="#">Home 
-                <i class="fa fa-home" aria-hidden="true"></i>
-            </a>
-            <a href="addDealer.jsp">
-                Dealers Manager 
-                <i class="fa fa-users" aria-hidden="true"></i>
-            </a>
-            <a href="#" >
-                Machines Manager
-                <i class="fa fa-gamepad" aria-hidden="true"></i>
-            </a>
-            <a href="#">
-                Awards Manager 
-                <i class="fa fa-krw" aria-hidden="true"></i>
-            </a>
-            <a href="#">
-                Games History 
-                <i class="fa fa-file-text" aria-hidden="true"></i>
-            </a>
-        </nav>
+        <jsp:include page="navigationBar.jsp" />
         
         <div class="container">
             <div class="row">
-                <div class="col-3 crudMenu">
-                    <a href="addMachineType.jsp">
-                        Add a new machine type 
-                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <div class="col-12">
-                    
+                <jsp:include page="navigationBarMachines.jsp" />
+                <div class="col-9">
+                    <jsp:include page="ServletPrueba" />
+                    <c:out value="mensaje: ${message}"></c:out>
                 </div>
             </div>
         </div>

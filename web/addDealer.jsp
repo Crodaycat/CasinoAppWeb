@@ -21,32 +21,12 @@
     
     <body>
         
-        <nav>
-            <a href="#">Home 
-                <i class="fa fa-home" aria-hidden="true"></i>
-            </a>
-            <a href="#">
-                Dealers Manager 
-                <i class="fa fa-users" aria-hidden="true"></i>
-            </a>
-            <a href="#" >
-                Machines Manager
-                <i class="fa fa-gamepad" aria-hidden="true"></i>
-            </a>
-            <a href="#">
-                Awards Manager 
-                <i class="fa fa-krw" aria-hidden="true"></i>
-            </a>
-            <a href="#">
-                Games History 
-                <i class="fa fa-file-text" aria-hidden="true"></i>
-            </a>
-        </nav>
+        <jsp:include page="navigationBar.jsp" />
         
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <form action="AddDealer" method="POST">
+                    <form action="AddDealer" method="POST" class="centerContent">
                         <table>
                             <tr>
                                 <th><label for="dealerId">Dealer id: </label></th>

@@ -55,6 +55,7 @@ public class MachineTypeAdd extends HttpServlet {
             em.flush();
             em.getTransaction().commit();
             
+            request.getSession().setAttribute("message", "Machine type succesfull created.");
             response.sendRedirect("addMachineType.jsp");
         }
     }

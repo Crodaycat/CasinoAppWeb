@@ -63,6 +63,7 @@ nav a:hover {
 }
 
 .crudMenu a {
+    display: inline-block;
     color: rgb(255, 255, 255);
     font-weight: bold;
     text-decoration: none;
@@ -72,4 +73,13 @@ nav a:hover {
     color: red;
     text-decoration: none;
     border-bottom: 1px solid red;
+}
+
+.centerContent {
+    text-align: center;
+}
+
+.centerTable {
+    margin: 0px auto;
+    float: none;
 }

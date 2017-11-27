@@ -21,40 +21,22 @@
     
     <body>
         
-        <nav>
-            <a href="#">Home 
-                <i class="fa fa-home" aria-hidden="true"></i>
-            </a>
-            <a href="#">
-                Dealers Manager 
-                <i class="fa fa-users" aria-hidden="true"></i>
-            </a>
-            <a href="#" >
-                Machines Manager
-                <i class="fa fa-gamepad" aria-hidden="true"></i>
-            </a>
-            <a href="#">
-                Awards Manager 
-                <i class="fa fa-krw" aria-hidden="true"></i>
-            </a>
-            <a href="#">
-                Games History 
-                <i class="fa fa-file-text" aria-hidden="true"></i>
-            </a>
-        </nav>
+        <jsp:include page="navigationBar.jsp" />
         
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <form action="MachineTypeAdd" method="POST">
-                        <table>
-                            <tr>
-                                <th><label for="description">Machine type description: </label></th>
-                                <th><input type="text" id="description" name="description" class="form-control"></th>
-                            </tr>
-                        </table>
-                            <input type="submit" name="action" class="btn btn-primary" value="add">
+                <jsp:include page="navigationBarMachines.jsp" />
+                <div class="col-9">
+                    <h1 class="centerContent">Add a new machine type</h1>
+                    <form action="MachineTypeAdd" method="POST" class="centerContent">
+                        <div class="form-group">
+                            <label for="description">Machine type description: </label>
+                            <input type="text" id="description" name="description" class="form-control">
+                        </div>
+                        <input type="submit" name="action" class="btn btn-primary" value="add">
                     </form>
+                    <p>${message}</p>
+                    <c:remove var="message" scope="session" /> 
                 </div>
             </div>
         </div>

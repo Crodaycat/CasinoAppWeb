@@ -21,27 +21,7 @@
     
     <body>
         
-        <nav>
-            <a href="#">Home 
-                <i class="fa fa-home" aria-hidden="true"></i>
-            </a>
-            <a href="addDealer.jsp">
-                Dealers Manager 
-                <i class="fa fa-users" aria-hidden="true"></i>
-            </a>
-            <a href="machineManager.jsp" >
-                Machines Manager
-                <i class="fa fa-gamepad" aria-hidden="true"></i>
-            </a>
-            <a href="#">
-                Awards Manager 
-                <i class="fa fa-krw" aria-hidden="true"></i>
-            </a>
-            <a href="#">
-                Games History 
-                <i class="fa fa-file-text" aria-hidden="true"></i>
-            </a>
-        </nav>
+        <jsp:include page="navigationBar.jsp" />
         
         <div class="container">
             <div class="row">
