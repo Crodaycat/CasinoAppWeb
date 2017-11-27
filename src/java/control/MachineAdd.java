@@ -7,7 +7,6 @@ package control;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -16,14 +15,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Machine;
 import model.MachineType;
 
 /**
  *
  * @author luis.giraldo10
  */
-@WebServlet(name = "GetMachineTypes", urlPatterns = {"/GetMachineTypes"})
-public class GetMachineTypes extends HttpServlet {
+@WebServlet(name = "MachineAdd", urlPatterns = {"/MachineAdd"})
+public class MachineAdd extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,18 +39,28 @@ public class GetMachineTypes extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            String url = request.getParameter("url");
             
-            switch (url) {
-                case "addMachine":
-                    List<MachineType> machines = getAllMachines();
-                    request.setAttribute("machineTypeList", machines);
-                    request.getRequestDispatcher("addMachine.jsp").forward(request, response);
-                    break;
-                default:
-                    response.sendRedirect("index.jsp");
-                    break;
-            }
+            int machineTypeId = Integer.parseInt(request.getParameter("machineType"));
+            
+            Machine machine = new Machine();
+            machine.setSerie(0);
+            
+            
+            EntityManager em;
+            EntityManagerFactory emf;
+            emf = Persistence.createEntityManagerFactory("CasinoAppWebPU");
+            em = emf.createEntityManager();
+            em.getTransaction().begin();
+            
+            MachineType machineType = em.find(MachineType.class, machineTypeId);
+            machine.setMachineType(machineType);
+            
+            em.persist(machine);
+            em.flush();
+            em.getTransaction().commit();
+            
+            request.getSession().setAttribute("message", "Machine succesfull created.");
+            response.sendRedirect("addMachine.jsp");
             
         }
     }
@@ -93,19 +103,5 @@ public class GetMachineTypes extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-    
-    private List<MachineType> getAllMachines () {
-        EntityManager em;
-        EntityManagerFactory emf;
 
-        emf = Persistence.createEntityManagerFactory("CasinoAppWebPU");
-        em = emf.createEntityManager();
-        em.getTransaction().begin();
-        List<MachineType> machines = em.createNamedQuery("MachineType.findAll").getResultList();
-        em.getTransaction().commit();
-        em.close();
-        
-        return machines;
-    }
-    
 }

@@ -27,8 +27,6 @@
             <div class="row">
                 <jsp:include page="navigationBarMachines.jsp" />
                 <div class="col-9">
-                    <jsp:include page="ServletPrueba" />
-                    <c:out value="mensaje: ${message}"></c:out>
                 </div>
             </div>
         </div>

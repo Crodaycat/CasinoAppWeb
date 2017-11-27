@@ -17,7 +17,7 @@
                 Add a new machine type 
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
             </a>
-            <a href="#">
+            <a href="GetMachineTypes?url=addMachine">
                 Add a new machine
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
             </a>

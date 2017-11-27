@@ -28,10 +28,14 @@
                 <jsp:include page="navigationBarMachines.jsp" />
                 <div class="col-9">
                     <h1 class="centerContent">Add a new machine type</h1>
-                    <form action="MachineTypeAdd" method="POST" class="centerContent">
+                    <form action="MachineAdd" method="POST" class="centerContent">
                         <div class="form-group">
-                            <label for="description">Machine type description: </label>
-                            <input type="text" id="description" name="description" class="form-control">
+                            <label for="machineType">Machine type description: </label>
+                            <select class="form-control" name="machineType">
+                                <c:forEach items="${machineTypeList}" var="machine">
+                                    <option value="${machine.id}">${machine.description}</option>
+                                </c:forEach>
+                            </select>
                         </div>
                         <input type="submit" name="action" class="btn btn-primary" value="add">
                     </form>
