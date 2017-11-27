@@ -1,0 +1,17 @@
+<%-- 
+    Document   : dealerManager
+    Created on : 26-Nov-2017, 09:07:46
+    Author     : USUARIO
+--%>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+    </body>
+</html>
