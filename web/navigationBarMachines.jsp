@@ -17,6 +17,10 @@
                 Add a new machine type 
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
             </a>
+            <a href="GetMachineTypes?url=getAllMachineTypes">
+                Consult machine types
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
             <a href="GetMachineTypes?url=addMachine">
                 Add a new machine
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
