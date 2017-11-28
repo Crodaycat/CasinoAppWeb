@@ -25,8 +25,9 @@
         
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <form action="AddDealer" method="POST" class="centerContent">
+                <jsp:include page="navigationBarDealer.jsp" />
+                <div class="col-9">
+                    <form action="DealerAdd" method="POST" class="centerContent">
                         <table>
                             <tr>
                                 <th><label for="dealerId">Dealer id: </label></th>
@@ -55,6 +56,8 @@
                         </table>
                             <input type="submit" name="action" class="btn btn-primary" value="add">
                     </form>
+                            <p>${message}</p>
+                    <c:remove var="message" scope="session" /> 
                 </div>
             </div>
         </div>
