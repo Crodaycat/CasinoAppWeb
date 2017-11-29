@@ -27,10 +27,10 @@
             <div class="row">
                 <jsp:include page="navigationBarMachines.jsp" />
                 <div class="col-9">
-                    <h1 class="centerContent">List of all machine registered types</h1>
+                    <h1 class="centerContent">List of all machines registered</h1>
                     <form action="GetMachineType?url=consultType" method="POST" class="form-inline centerContent">
                             <div class="form-group  mx-sm-3">
-                                <input type="text" id="typeId" name="id" class="form-control" placeholder="Search by machine type id">
+                                <input type="text" id="typeId" name="id" class="form-control" placeholder="Search by machine serie">
                             </div>
                             <button type="submit" class="btn btn-primary">
                                 Search <i class="fa fa-search" aria-hidden="true"></i>
@@ -43,27 +43,27 @@
                     <table class="table table-striped table-dark">
                         <thead>
                             <tr>
-                              <th scope="col">ID</th>
+                              <th scope="col">Serie</th>
                               <th scope="col">Description</th>
                               <th scope="col" class="centerContent">Edit</th>
                               <th scope="col" class="centerContent">Delete</th>
                             </tr>
                         </thead>
                         <c:forEach items="${machineTypeList}" var="machineType">
-                            <tr>
-                                <th scope="row">${machineType.id}</th>
+                            <c:forEach items="${machineType.machineCollection}" var="machine">
+                                <th scope="row">${machine.serie}</th>
                                 <td>${machineType.description}</td>
                                 <td class="centerContent tableLink">
-                                    <a href="EditMachineType?url=edit&id=${machineType.id}">
+                                    <a href="EditMachineType?url=edit&id=${machine.serie}">
                                         <i class="fa fa-pencil-square" aria-hidden="true"></i>
                                     </a>
                                 </td>
                                 <td class="centerContent tableLink">
-                                    <a href="MachineTypeDelete?id=${machineType.id}">
+                                    <a href="MachineTypeDelete?id=${machine.serie}">
                                         <i class="fa fa-times-circle-o" aria-hidden="true"></i>
                                     </a>
                                 </td>
-                             </tr>
+                            </c:forEach>
                         </c:forEach>
                     </table>
                 </div>

@@ -25,22 +25,17 @@
         
         <div class="container">
             <div class="row">
-                <jsp:include page="navigationBarDealer.jsp" />
-                <div class="col-9 centerContent">
-                    <h1>Register a new Dealer</h1>
-                    <form action="DealerAdd" method="POST" class="centerContent">
+                <jsp:include page="navigationBarMachines.jsp" />
+                <div class="col-9">
+                    <h1 class="centerContent">Add a new machine type</h1>
+                    <form action="EditMachineType?url=save&id=${type.id}" method="POST" class="centerContent">
                         <div class="form-group">
-                            <label for="dealerFN">First name:</label>
-                            <input type="text" id="dealerFN" name="firstName" class="form-control">
-                            <label for="dealerLN">Last name:</label>
-                            <input type="text" id="dealerLN" name="lastName" class="form-control">
-                            <label for="dealerWHP">Worked hour price:</label>
-                            <input type="text" id="dealerWHP" name="workedHoursPrice" class="form-control">
+                            <label for="description">Machine type description: </label>
+                            <input type="text" id="description" name="description" value="${type.description}" class="form-control">
                         </div>
-                            <input type="submit" name="action" class="btn btn-primary" value="add">
+                        <input type="submit" name="action" class="btn btn-primary" value="Save">
                     </form>
-                    <div>${message}</div>
-                    <c:remove var="message" scope="session" /> 
+                    <p>${message}</p>
                 </div>
             </div>
         </div>

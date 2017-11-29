@@ -25,6 +25,10 @@
                 Add a new machine
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
             </a>
+            <a href="GetMachineTypes?url=getAllMachines">
+                Consult machines
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
             <a href="GetMachineTypes?url=addAward">
                 Add a new award
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>

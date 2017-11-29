@@ -38,7 +38,7 @@ public class MachineTypeDelete extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            String machineTypeId = request.getParameter("id");
+            int machineTypeId = Integer.parseInt(request.getParameter("id"));
             
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("CasinoAppWebPU");
             EntityManager em = emf.createEntityManager();

@@ -39,11 +39,10 @@ public class DealerAdd extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            int id = Integer.parseInt(request.getParameter("id"));
             float workedHoursPrice = Float.parseFloat(request.getParameter("workedHoursPrice"));
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
-            Dealer dealer = new Dealer(id,firstName, lastName, workedHoursPrice );
+            Dealer dealer = new Dealer(0,firstName, lastName, workedHoursPrice);
             
             EntityManager em;
             EntityManagerFactory emf;
@@ -57,7 +56,7 @@ public class DealerAdd extends HttpServlet {
             em.flush();
             em.getTransaction().commit();
             
-            request.getSession().setAttribute("message", "Dealer type succesfull created.");
+            request.getSession().setAttribute("message", "Dealer succesfull created.");
             response.sendRedirect("addDealer.jsp");
         }
     }

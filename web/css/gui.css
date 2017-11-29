@@ -32,6 +32,7 @@ footer {
 
 .benderLogo {
     float: left;
+    border-bottom: 1px solid red;
 }
 
 .footerInfo {
@@ -63,6 +64,8 @@ nav a:hover {
 }
 
 .crudMenu a {
+    box-sizing: border-box;
+    margin: 6px 0;
     display: block;
     color: rgb(255, 255, 255);
     font-weight: bold;
@@ -81,6 +84,7 @@ nav a:hover {
 
 .centerContent {
     text-align: center;
+    justify-content: center;
 }
 
 .centerTable {
@@ -89,7 +93,7 @@ nav a:hover {
 }
 
 .tableLink a {
-    display: block;
+    float: none;
     color: rgb(255, 255, 255);
     font-weight: bold;
     text-decoration: none;

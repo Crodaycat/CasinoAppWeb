@@ -25,41 +25,44 @@
         
         <div class="container">
             <div class="row">
-                <jsp:include page="navigationBarMachines.jsp" />
+                <jsp:include page="navigationBarDealer.jsp" />
                 <div class="col-9">
-                    <h1 class="centerContent">List of all machine registered types</h1>
-                    <form action="GetMachineType?url=consultType" method="POST" class="form-inline centerContent">
+                    <h1 class="centerContent">List of all registered dealers</h1>
+                    
+                    <form action="GetDealer?url=consultDealer" method="POST" class="form-inline centerContent">
                             <div class="form-group  mx-sm-3">
-                                <input type="text" id="typeId" name="id" class="form-control" placeholder="Search by machine type id">
+                                <input type="text" id="dealerId" name="id" class="form-control" placeholder="Search by dealer id">
                             </div>
                             <button type="submit" class="btn btn-primary">
                                 Search <i class="fa fa-search" aria-hidden="true"></i>
                             </button>
                     </form>
                     <br>
-                    
                     <div>${message}</div>
-                    
                     <table class="table table-striped table-dark">
                         <thead>
                             <tr>
                               <th scope="col">ID</th>
-                              <th scope="col">Description</th>
+                              <th scope="col">First name</th>
+                              <th scope="col">Last name</th>
+                              <th scope="col">Worked hour price</th>
                               <th scope="col" class="centerContent">Edit</th>
                               <th scope="col" class="centerContent">Delete</th>
                             </tr>
                         </thead>
-                        <c:forEach items="${machineTypeList}" var="machineType">
+                        <c:forEach items="${dealersList}" var="dealer">
                             <tr>
-                                <th scope="row">${machineType.id}</th>
-                                <td>${machineType.description}</td>
+                                <th scope="row">${dealer.id}</th>
+                                <td>${dealer.firstName}</td>
+                                <td>${dealer.lastName}</td>
+                                <td>${dealer.workedHourPrice}</td>
                                 <td class="centerContent tableLink">
-                                    <a href="EditMachineType?url=edit&id=${machineType.id}">
+                                    <a href="EditDealer?url=edit&id=${dealer.id}">
                                         <i class="fa fa-pencil-square" aria-hidden="true"></i>
                                     </a>
                                 </td>
                                 <td class="centerContent tableLink">
-                                    <a href="MachineTypeDelete?id=${machineType.id}">
+                                    <a href="DealerDelete?id=${dealer.id}">
                                         <i class="fa fa-times-circle-o" aria-hidden="true"></i>
                                     </a>
                                 </td>

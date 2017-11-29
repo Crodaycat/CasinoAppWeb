@@ -17,6 +17,14 @@
                 Add a new Dealer
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
             </a>
+            <a href="GetDealers">
+                Consult dealers
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+            <a href="addFinancialProfit.jsp">
+                Add a new dealer financial profit
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </a>
         </div>
     </body>
 </html>

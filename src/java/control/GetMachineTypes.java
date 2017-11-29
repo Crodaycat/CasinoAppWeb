@@ -47,6 +47,11 @@ public class GetMachineTypes extends HttpServlet {
                     request.setAttribute("machineTypeList", machines);
                     request.getRequestDispatcher("addMachine.jsp").forward(request, response);
                     break;
+                case"getAllMachines":
+                    machines = getAllMachines();
+                    request.setAttribute("machineTypeList", machines);
+                    request.getRequestDispatcher("getAllMachines.jsp").forward(request, response);
+                    break;
                 case "addAward":
                     machines = getAllMachines();
                     request.setAttribute("machineTypeList", machines);

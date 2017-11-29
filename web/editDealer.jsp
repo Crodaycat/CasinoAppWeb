@@ -28,16 +28,16 @@
                 <jsp:include page="navigationBarDealer.jsp" />
                 <div class="col-9 centerContent">
                     <h1>Register a new Dealer</h1>
-                    <form action="DealerAdd" method="POST" class="centerContent">
+                    <form action="EditDealer?url=save&id=${dealer.id}" method="POST" class="centerContent">
                         <div class="form-group">
                             <label for="dealerFN">First name:</label>
-                            <input type="text" id="dealerFN" name="firstName" class="form-control">
+                            <input type="text" id="dealerFN" name="firstName" value="${dealer.firstName}" class="form-control">
                             <label for="dealerLN">Last name:</label>
-                            <input type="text" id="dealerLN" name="lastName" class="form-control">
+                            <input type="text" id="dealerLN" name="lastName" value="${dealer.lastName}" class="form-control">
                             <label for="dealerWHP">Worked hour price:</label>
-                            <input type="text" id="dealerWHP" name="workedHoursPrice" class="form-control">
+                            <input type="text" id="dealerWHP" name="workedHoursPrice" value="${dealer.workedHourPrice}" class="form-control">
                         </div>
-                            <input type="submit" name="action" class="btn btn-primary" value="add">
+                            <input type="submit" name="action" class="btn btn-primary" value="Save">
                     </form>
                     <div>${message}</div>
                     <c:remove var="message" scope="session" /> 
