@@ -17,7 +17,7 @@
             <a href="index.jsp">Home 
                 <i class="fa fa-home" aria-hidden="true"></i>
             </a>
-            <a href="addDealer.jsp">
+            <a href="dealerManager.jsp">
                 Dealers Manager 
                 <i class="fa fa-users" aria-hidden="true"></i>
             </a>
